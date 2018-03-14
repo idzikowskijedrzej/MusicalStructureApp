@@ -31,18 +31,20 @@ public class TrackAdapter extends ArrayAdapter <Track> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
-        if(listItem == null)
-            listItem = LayoutInflater.from(mContext).inflate(R.layout.list_item_track,parent,false);
+        if(listItem == null) {
+            listItem = LayoutInflater.from(mContext).inflate(
+                    R.layout.list_item_track,parent,false);
+        }
 
-        Track currentTrack = trackList.get(position);
+        Track currentTrack = getItem(position);
 
-        TextView trackName = (TextView) listItem.findViewById(R.id.trackName);
+        TextView trackName = listItem.findViewById(R.id.trackName);
         trackName.setText(currentTrack.getTrackName());
 
-        TextView artistName = (TextView) listItem.findViewById(R.id.artistName);
+        TextView artistName = listItem.findViewById(R.id.artistName);
         artistName.setText(currentTrack.getArtistName());
 
-        ImageView albumCover = (ImageView) listItem.findViewById(R.id.albumCover);
+        ImageView albumCover = listItem.findViewById(R.id.albumCover);
         albumCover.setImageResource(currentTrack.getAlbumCover());
 
         return listItem;

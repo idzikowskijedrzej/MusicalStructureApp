@@ -1,10 +1,10 @@
 package com.example.android.musicalstructureapp;
+
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 
 public class Album extends AppCompatActivity {
 
@@ -13,31 +13,22 @@ public class Album extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album1);
 
-        String title;
-        String author;
-        int coverID;
 
-        TextView trackTitle = findViewById(R.id.tv_albumName);
-        TextView artistName = findViewById(R.id.tv_artistName);
+        //Find all our view components
+        ImageView imageView = findViewById(R.id.cover_image);
+        TextView musicTextView = findViewById(R.id.tv_albumName);
+        TextView bandTextView = findViewById(R.id.tv_artistName);
 
-        ImageView cover = findViewById(R.id.cover_image);
+        //Collect our intent and populate our layout
+        Intent intent = getIntent();
+        Bundle extras = getIntent().getExtras();
+        int cover = extras.getInt("imageResourceId");
+        String track = intent.getStringExtra("musicName");
+        String artist = intent.getStringExtra("bandName");
 
-
-        if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if (extras == null) {
-                title = "Tytulik";
-                author = "Autorek";
-                coverID = R.drawable.bigpink;
-            } else {
-                title = extras.getString("trackName");
-                author = extras.getString("trackArtist");
-                coverID = extras.getInt("trackCover");
-            }
-
-            trackTitle.setText(title);
-            artistName.setText(author);
-            cover.setImageResource(coverID);
-        }
+        //Set elements
+        imageView.setImageResource(cover);
+        musicTextView.setText(track);
+        bandTextView.setText(artist);
     }
 }
