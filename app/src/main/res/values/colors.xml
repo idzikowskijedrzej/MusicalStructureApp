@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //unused
+    <color name="colorPrimary">#3F51B5</color>
+
+    //battery etc.
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="mainCatalogues">#FFFFFF</color>
+
+    <color name="colorAccent">#FF4081</color>
+</resources>

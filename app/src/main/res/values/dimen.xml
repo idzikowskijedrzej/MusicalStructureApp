@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="albumCoverDimen">84dp</dimen>
+<dimen name="albumCoverPadding">2dp</dimen>
+
+<dimen name="mainCatalogues">16sp</dimen>
+</resources>

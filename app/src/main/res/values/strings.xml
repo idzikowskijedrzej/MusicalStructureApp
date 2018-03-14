@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MusicalStructureApp</string>
+    <string name="catalogue">Catalogue</string>
+    <string name="catalogue1">catalogue1</string>
+
+    <!--Albums, Artists, Tracks-->
+    <string name="album1">Revolver</string>
+    <string name="artist1">The Beatles</string>
+    <string name="topTrack1">Tomorrow Never Knows</string>
+
+    <string name="album2">Disraeli Gears</string>
+    <string name="artist2">Cream</string>
+    <string name="topTrack2">Sunshine Of Your Love</string>
+
+    <string name="album3">The Doors</string>
+    <string name="artist3">The Doors</string>
+    <string name="topTrack3">Light My Fire</string>
+
+    <string name="album4">Are You Experienced</string>
+    <string name="artist4">The Jimi Hendrix Experience</string>
+    <string name="topTrack4">Purple Haze</string>
+
+    <string name="album5">Ogden s Gone Nut Flake</string>
+    <string name="artist5">The Small Faces</string>
+    <string name="topTrack5">Lazy Sunday</string>
+
+    <string name="album6">Music From Big Pink</string>
+    <string name="artist6">The Band</string>
+    <string name="topTrack6">The Weight</string>
+
+    <string name="album7">Truth</string>
+    <string name="artist7">Jeff Beck</string>
+    <string name="topTrack7">Let Me Love You</string>
+
+    <string name="album8">Electric Ladyland</string>
+    <string name="artist8">The Jimi Hendrix Experience</string>
+    <string name="topTrack8">Voodoo Child</string>
+
+    <string name="album9">Abbey Road</string>
+    <string name="artist9">The Beatles</string>
+    <string name="topTrack9">Come Together</string>
+
+
+</resources>
