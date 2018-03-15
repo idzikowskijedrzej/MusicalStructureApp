@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<dimen name="albumCoverDimen">84dp</dimen>
-<dimen name="albumCoverPadding">2dp</dimen>
+    <dimen name="topMiniatureDimen">64dp</dimen>
+    <dimen name="topCoverPadding">4dp</dimen>
+    <dimen name="topTextDimen">24sp</dimen>
+    <dimen name="topArtistDimen">16sp</dimen>
+
+    <dimen name="albumCoverDimen">84dp</dimen>
+    <dimen name="albumCoverPadding">2dp</dimen>
 
 <dimen name="mainCatalogues">16sp</dimen>
 </resources>

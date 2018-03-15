@@ -16,19 +16,19 @@ public class Album extends AppCompatActivity {
 
         //Find all our view components
         ImageView imageView = findViewById(R.id.cover_image);
-        TextView musicTextView = findViewById(R.id.tv_albumName);
-        TextView bandTextView = findViewById(R.id.tv_artistName);
+        TextView topAlbumName = findViewById(R.id.topAlbumName);
+        TextView bandTextView = findViewById(R.id.topArtistName);
 
         //Collect our intent and populate our layout
         Intent intent = getIntent();
         Bundle extras = getIntent().getExtras();
         int cover = extras.getInt("imageResourceId");
-        String track = intent.getStringExtra("musicName");
-        String artist = intent.getStringExtra("bandName");
+        String album = intent.getStringExtra("albumName");
+        String artist = intent.getStringExtra("artistName");
 
         //Set elements
         imageView.setImageResource(cover);
-        musicTextView.setText(track);
+        topAlbumName.setText(album);
         bandTextView.setText(artist);
     }
 }

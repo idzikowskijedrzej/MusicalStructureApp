@@ -1,5 +1,6 @@
 package com.example.android.musicalstructureapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,13 +32,19 @@ public class MainActivity extends AppCompatActivity {
         albumsList.add(new Track(getString(R.string.album8), getString(R.string.artist8), R.drawable.electriclayland));
         albumsList.add(new Track(getString(R.string.album9), getString(R.string.artist9), R.drawable.abbeyroad));
     }
-    private void initTrackAdapter(ListView listView, ArrayList<Track> albumList ){
+    private void initTrackAdapter(ListView listView, final ArrayList<Track> albumList ){
         TrackAdapter mAdapter = new TrackAdapter(this, albumList );
         listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.e("position", " " + i);
+                Track track = albumList.get(i);
+                Intent intent = new Intent(MainActivity.this, Album.class);
+                intent.putExtra("albumName", track.getTrackName());
+                intent.putExtra("artistName", track.getArtistName());
+                intent.putExtra("imageResourceId", track.getAlbumCover());
+                startActivity(intent);
             }
         });
     }
