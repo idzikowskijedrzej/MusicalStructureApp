@@ -3,9 +3,11 @@ package com.example.android.musicalstructureapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -15,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ListView listView = findViewById(R.id.albums_list);
+        ArrayList<Track> myList = new ArrayList();
+        addArrayListElements(myList);
+        initTrackAdapter(listView, myList);
+    }
 
-        final ArrayList<Track> albumsList = new ArrayList<>();
+    public void addArrayListElements(ArrayList<Track> albumsList) {
         albumsList.add(new Track(getString(R.string.album1), getString(R.string.artist1), R.drawable.revolver));
         albumsList.add(new Track(getString(R.string.album2), getString(R.string.artist2), R.drawable.disraeli));
         albumsList.add(new Track(getString(R.string.album3), getString(R.string.artist3), R.drawable.doors));
@@ -26,24 +33,16 @@ public class MainActivity extends AppCompatActivity {
         albumsList.add(new Track(getString(R.string.album7), getString(R.string.artist7), R.drawable.truth));
         albumsList.add(new Track(getString(R.string.album8), getString(R.string.artist8), R.drawable.electriclayland));
         albumsList.add(new Track(getString(R.string.album9), getString(R.string.artist9), R.drawable.abbeyroad));
-
-        TrackAdapter mAdapter = new TrackAdapter(this, albumsList);
-        ListView listView = findViewById(R.id.albums_list);
-        listView.setAdapter(mAdapter);
-
-        //Add event listener so we can handle clicks
-        AdapterView.OnItemClickListener adapterViewListener = new
-                AdapterView.OnItemClickListener() {
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Track track = albumsList.get(position);
-                        Intent intent = new Intent(MainActivity.this, Album.class);
-                        intent.putExtra("musicName", track.getTrackName());
-                        intent.putExtra("bandName", track.getArtistName());
-                        intent.putExtra("imageResourceId", track.getAlbumCover());
-                        startActivity(intent);
-                    }
-                };
-        //Set the listener to the list view
-        listView.setOnItemClickListener(adapterViewListener);
     }
+    private void initTrackAdapter(ListView listView, ArrayList<Track> albumList ){
+        TrackAdapter mAdapter = new TrackAdapter(this, albumList );
+        listView.setAdapter(mAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.e("position", " " + i);
+            }
+        });
+    }
+
 }

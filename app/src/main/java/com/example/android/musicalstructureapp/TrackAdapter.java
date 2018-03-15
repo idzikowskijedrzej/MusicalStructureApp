@@ -19,7 +19,7 @@ import java.util.List;
 
 public class TrackAdapter extends ArrayAdapter <Track> {
     private Context mContext;
-    private List<Track> trackList = new ArrayList<>();
+    private ArrayList<Track> trackList = new ArrayList<>();
 
     public TrackAdapter(@NonNull Context context, ArrayList<Track> list) {
         super(context, 0 , list);
