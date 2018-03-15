@@ -37,6 +37,7 @@
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+                android:textStyle="italic"
                 android:layout_width="wrap_content"
                 android:textSize="@dimen/topArtistDimen"
                 android:id="@+id/topArtistName"
