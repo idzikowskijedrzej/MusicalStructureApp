@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.e("position", " " + i);
-                Track track = albumList.get(i);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Log.e("position", " " + position);
+                Track track = albumList.get(position);
                 Intent intent = new Intent(MainActivity.this, Album.class);
                 intent.putExtra("albumName", track.getTrackName());
                 intent.putExtra("artistName", track.getArtistName());
