@@ -2,9 +2,9 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:clickable="true"
     android:id="@+id/list_item"
     android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
     android:layout_height="wrap_content">
     <ImageView
         android:layout_gravity="center"
