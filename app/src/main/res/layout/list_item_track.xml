@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/list_item"
-    android:orientation="horizontal"
-    android:descendantFocusability="blocksDescendants"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
     <ImageView
-        android:layout_gravity="center"
-        android:padding="@dimen/albumCoverPadding"
         android:id="@+id/albumCover"
         android:layout_width="@dimen/albumCoverDimen"
         android:layout_height="@dimen/albumCoverDimen"
-        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"/>
+        android:layout_gravity="center"
+        android:padding="@dimen/albumCoverPadding"
+        android:scaleType="centerCrop" />
+
     <LinearLayout
-        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_toRightOf="@id/albumCover"
-        android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:gravity="left"
+        android:orientation="vertical">
 
         <TextView
-            android:padding="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Livin on the edge"
-            android:id="@+id/trackName"/>
-        <TextView
+            android:id="@+id/trackName"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:paddingBottom="16dp"
+            android:textSize="@dimen/topTextDimen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:text="Livin on the edge" />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
             android:text="LAMAO"
-            android:id="@+id/artistName"/>
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/topArtistDimen"
+            android:textStyle="italic"  />
     </LinearLayout>
 
 </LinearLayout>

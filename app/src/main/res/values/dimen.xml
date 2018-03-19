@@ -5,6 +5,10 @@
     <dimen name="topTextDimen">24sp</dimen>
     <dimen name="topArtistDimen">16sp</dimen>
 
+    <dimen name="marginPlayButton">16dp</dimen>
+    <dimen name="playButton">64dp</dimen>
+    <dimen name="nextButton">32dp</dimen>
+
     <dimen name="albumCoverDimen">84dp</dimen>
     <dimen name="albumCoverPadding">2dp</dimen>
 

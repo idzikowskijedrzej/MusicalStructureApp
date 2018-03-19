@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         initTrackAdapter(listView, myList);
     }
 
-    public void addArrayListElements(ArrayList<Track> albumsList) {
+    private void addArrayListElements(ArrayList<Track> albumsList) {
         albumsList.add(new Track(getString(R.string.album1), getString(R.string.artist1), R.drawable.revolver));
         albumsList.add(new Track(getString(R.string.album2), getString(R.string.artist2), R.drawable.disraeli));
         albumsList.add(new Track(getString(R.string.album3), getString(R.string.artist3), R.drawable.doors));
@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Log.e("position", " " + position);
-                Track track = albumList.get(position);
+                Track album = albumList.get(position);
                 Intent intent = new Intent(MainActivity.this, Album.class);
-                intent.putExtra("albumName", track.getTrackName());
-                intent.putExtra("artistName", track.getArtistName());
-                intent.putExtra("imageResourceId", track.getAlbumCover());
+                intent.putExtra("albumName", album.getTrackName());
+                intent.putExtra("artistName", album.getArtistName());
+                intent.putExtra("imageResourceId", album.getAlbumCover());
                 startActivity(intent);
             }
         });

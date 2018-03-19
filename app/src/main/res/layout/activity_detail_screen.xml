@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicalstructureapp.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cover_image"
+            android:layout_width="@dimen/topMiniatureDimen"
+            android:layout_height="@dimen/topMiniatureDimen"
+            android:layout_marginRight="@dimen/topCoverPadding"
+            android:padding="@dimen/topCoverPadding"
+            android:scaleType="fitStart"
+            android:src="@drawable/doors" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/topAlbumName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="left"
+                android:text="Album Name"
+                android:textColor="@color/mainCatalogues"
+                android:textSize="@dimen/topTextDimen" />
+
+            <TextView
+                android:id="@+id/topArtistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="left"
+                android:text="Artist Name"
+                android:textColor="@color/mainCatalogues"
+                android:textSize="@dimen/topArtistDimen"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_below="@id/topBarLayout"
+        android:padding="32dp"
+        android:layout_marginTop="32dp"
+        android:id="@+id/mainCover"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/mainCatalogues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/doors" />
+
+    <TextView
+        android:id="@+id/trackName"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="@dimen/topArtistDimen"
+        android:layout_below="@id/mainCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track Name very long" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryDark">
+
+        <ToggleButton
+            android:id="@+id/backward"
+            android:layout_toLeftOf="@id/play"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/nextButton"
+            android:layout_height="@dimen/nextButton"
+            android:layout_margin="@dimen/marginPlayButton"
+            android:background="@drawable/backward_button"
+            android:textOff="@null"
+            android:textOn="@null"/>
+
+
+        <ToggleButton
+            android:id="@+id/play"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/playButton"
+            android:layout_height="@dimen/playButton"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="@dimen/marginPlayButton"
+            android:layout_marginStart="@dimen/marginPlayButton"
+            android:layout_marginTop="16dp"
+            android:background="@layout/play_toggle_button"
+            android:textOff="@null"
+            android:textOn="@null" />
+
+        <ToggleButton
+            android:id="@+id/repeat"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/play"
+            android:layout_width="@dimen/nextButton"
+            android:layout_height="@dimen/nextButton"
+            android:layout_margin="@dimen/marginPlayButton"
+            android:background="@drawable/forward_button"
+            android:checked="false"
+            android:textOff="@null"
+            android:textOn="@null" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
