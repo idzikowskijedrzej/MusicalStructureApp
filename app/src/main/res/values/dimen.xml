@@ -5,6 +5,8 @@
     <dimen name="topTextDimen">24sp</dimen>
     <dimen name="topArtistDimen">16sp</dimen>
 
+    <dimen name="nowPlayingField">4dp</dimen>
+    <dimen name="nowPlayingText">16sp</dimen>
     <dimen name="marginPlayButton">16dp</dimen>
     <dimen name="playButton">64dp</dimen>
     <dimen name="nextButton">32dp</dimen>

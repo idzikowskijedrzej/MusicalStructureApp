@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/list_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:scaleType="centerCrop" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_toRightOf="@id/albumCover"
@@ -40,10 +40,18 @@
             android:paddingBottom="16dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:text="LAMAO"
+            android:text="Aerosmith"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/topArtistDimen"
             android:textStyle="italic"  />
     </LinearLayout>
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:visibility="invisible"
+        android:layout_width="@dimen/playButton"
+        android:layout_height="@dimen/playButton"
+        android:src="@drawable/play"/>
 
-</LinearLayout>
+</RelativeLayout>

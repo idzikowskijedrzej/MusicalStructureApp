@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">MusicalStructureApp</string>
+    <string name="app_name">Music App</string>
     <string name="catalogue">Catalogue</string>
     <string name="catalogue1">catalogue1</string>
+    <string name="nowPlaying">Choose track . . .</string>
 
     <!--Albums, Artists-->
     <string name="album1">Revolver</string>
