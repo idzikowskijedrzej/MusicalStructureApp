@@ -10,7 +10,7 @@
         android:layout_width="@dimen/albumCoverDimen"
         android:layout_height="@dimen/albumCoverDimen"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:padding="@dimen/albumCoverPadding"
         android:scaleType="centerCrop" />
@@ -25,13 +25,13 @@
 
         <TextView
             android:id="@+id/trackName"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:textSize="@dimen/topTextDimen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
             android:paddingTop="16dp"
-            android:text="Livin on the edge" />
+            android:text="Livin on the edge"
+            android:textSize="@dimen/topTextDimen" />
 
         <TextView
             android:id="@+id/artistName"
@@ -43,15 +43,16 @@
             android:text="Aerosmith"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/topArtistDimen"
-            android:textStyle="italic"  />
+            android:textStyle="italic" />
     </LinearLayout>
+
     <ImageView
+        android:layout_width="@dimen/playButton"
+        android:layout_height="@dimen/playButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_margin="8dp"
-        android:visibility="invisible"
-        android:layout_width="@dimen/playButton"
-        android:layout_height="@dimen/playButton"
-        android:src="@drawable/play"/>
+        android:src="@drawable/play"
+        android:visibility="invisible" />
 
 </RelativeLayout>
