@@ -95,6 +95,7 @@
 
         <ToggleButton
             android:layout_toLeftOf="@id/play"
+            android:id="@+id/backward"
             android:layout_alignBottom="@id/play"
             android:layout_width="@dimen/nextButton"
             android:layout_height="@dimen/nextButton"
@@ -118,6 +119,7 @@
         <ToggleButton
             android:layout_toRightOf="@id/play"
             android:layout_alignBottom="@id/play"
+            android:id="@+id/forward"
             android:layout_width="@dimen/nextButton"
             android:layout_height="@dimen/nextButton"
             android:layout_margin="@dimen/marginPlayButton"

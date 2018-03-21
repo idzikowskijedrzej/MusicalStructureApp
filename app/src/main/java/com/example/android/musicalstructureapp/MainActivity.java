@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Log.e("position", " " + position);
                 Track album = albumList.get(position);
-                Intent intent = new Intent(MainActivity.this, Album.class);
-                intent.putExtra("albumName", album.getTrackName());
-                intent.putExtra("artistName", album.getArtistName());
-                intent.putExtra("imageResourceId", album.getAlbumCover());
-                startActivity(intent);
+                Intent goAlbumIntent = new Intent(MainActivity.this, AlbumActivity.class);
+                goAlbumIntent.putExtra("albumName", album.getTrackName());
+                goAlbumIntent.putExtra("artistName", album.getArtistName());
+                goAlbumIntent.putExtra("imageResourceId", album.getAlbumCover());
+                startActivity(goAlbumIntent);
             }
         });
     }
