@@ -14,5 +14,8 @@
     <dimen name="albumCoverDimen">84dp</dimen>
     <dimen name="albumCoverPadding">2dp</dimen>
 
+    <dimen name="listItemPadding">16dp</dimen>
+    <dimen name="helperPadding">8dp</dimen>
+
 <dimen name="mainCatalogues">16sp</dimen>
 </resources>

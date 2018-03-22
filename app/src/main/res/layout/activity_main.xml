@@ -7,16 +7,6 @@
     android:orientation="vertical"
     tools:context="com.example.android.musicalstructureapp.MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/colorPrimaryDark"
-        android:padding="@dimen/topCoverPadding"
-        android:text="@string/catalogue"
-        android:textColor="@color/mainCatalogues"
-        android:textSize="@dimen/topTextDimen" />
-
     <ListView
         android:id="@+id/albums_list"
         android:layout_width="wrap_content"

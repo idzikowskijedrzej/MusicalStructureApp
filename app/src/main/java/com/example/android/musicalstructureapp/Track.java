@@ -9,6 +9,7 @@ public class Track {
     private String mTrackName;
     // Store Artist name
     private String mArtistName;
+    // Store album cover as int
     private int mAlbumCover;
 
     // Constructor used to create track objects

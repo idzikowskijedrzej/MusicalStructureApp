@@ -1,5 +1,4 @@
 package com.example.android.musicalstructureapp;
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 
@@ -19,7 +17,11 @@ public class AlbumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
-        //Find all view components
+        setTitle(R.string.albumActionBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        //Find all view components-
         ImageView imageView = findViewById(R.id.cover_image);
         TextView topAlbumName = findViewById(R.id.topAlbumName);
         TextView bandTextView = findViewById(R.id.topArtistName);
